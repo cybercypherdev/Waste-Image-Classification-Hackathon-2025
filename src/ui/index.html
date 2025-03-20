@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- Meta Tags -->
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="WIC AI - An AI-powered waste classification system that helps sort waste into organic and recyclable categories.">
+   <meta name="keywords" content="AI, waste classification, recycling, sustainability, smart bins, machine learning">
+   <meta name="author" content="Ephraim Maina ">
+
+   <!-- Open Graph (OG) Meta Tags for Social Media -->
+   <meta property="og:title" content="WIC AI - Waste Image Classification">
+   <meta property="og:description" content="An AI-powered system that classifies waste into organic and recyclable categories.">
+   <meta property="og:type" content="website">
+
+
+   <!-- Title -->
+   <title>WIC AI - Waste Image Classification</title>
+
+   <!-- Favicon -->
+   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+   <link rel="manifest" href="/site.webmanifest">
+   
+
+   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link rel="preload" href="styles.css" as="style">
+   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" as="style">
+   
+</head>
+<body>
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Navigation Drawer -->
+    <nav class="sidebar" id="sidebar">
+        <div class="drawer-header">
+            <div class="logo">
+                <i class="fas fa-recycle"></i>
+                <span>WIC AI</span>
+            </div>
+            <button class="close-drawer" id="closeDrawer">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="nav-links">
+            <li class="active" data-section="home">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </li>
+            <li data-section="upload">
+                <i class="fas fa-upload"></i>
+                <span>Upload</span>
+            </li>
+            <li data-section="camera">
+                <i class="fas fa-camera"></i>
+                <span>Live Cam</span>
+            </li>
+            <li data-section="stats">
+                <i class="fas fa-chart-bar"></i>
+                <span>Stats</span>
+            </li>
+            <li data-section="about">
+                <i class="fas fa-info-circle"></i>
+                <span>About Dev</span>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Overlay for mobile drawer -->
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header>
+            <h1>W I C AI</h1>
+            <p>A Waste Image classification AI Model</p>
+            <div class="particles-container"></div>
+        </header>
+
+        <!-- Home Section -->
+        <section class="home-section" id="homeSection">
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-slides" id="carouselSlides">
+                        <!-- Slides will be populated by JavaScript -->
+                    </div>
+                    <button class="carousel-btn prev" id="prevSlide">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next" id="nextSlide">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <div class="carousel-dots" id="carouselDots">
+                        <!-- Dots will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-info">
+                <h2>About WIC AI</h2>
+                <p>WIC AI is an advanced Waste Image classification system that uses artificial intelligence to identify and categorize waste materials into recyclable and organic categories. Our platform helps promote sustainable waste management practices and environmental consciousness.</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-camera"></i>
+                        <h3>Live Camera</h3>
+                        <p>Real-time waste classification using your device's camera</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-upload"></i>
+                        <h3>Image Upload</h3>
+                        <p>Upload images for instant classification</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-chart-bar"></i>
+                        <h3>Statistics</h3>
+                        <p>Track classification history and patterns</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>AI Powered</h3>
+                        <p>Advanced machine learning for accurate classification</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="instructions-section">
+                <h2>How to Use</h2>
+                <div class="instructions-grid">
+                    <div class="instruction-step">
+                        <div class="step-number">1</div>
+                        <h3>Choose Input Method</h3>
+                        <p>Select between using your device's camera or uploading an image</p>
+                    </div>
+                    <div class="instruction-step">
+                        <div class="step-number">2</div>
+                        <h3>Capture or Upload</h3>
+                        <p>Take a photo using the camera or drag and drop an image</p>
+                    </div>
+                    <div class="instruction-step">
+                        <div class="step-number">3</div>
+                        <h3>View Results</h3>
+                        <p>Get instant classification results with confidence scores</p>
+                    </div>
+                    <div class="instruction-step">
+                        <div class="step-number">4</div>
+                        <h3>Track Progress</h3>
+                        <p>Monitor your classification history and statistics</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interface Container -->
+        <div class="interface-container" style="display: none;">
+            <!-- Upload Section -->
+            <section class="upload-section" id="uploadSection" style="display: none;">
+                <div class="drop-zone" id="dropZone">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Drag & drop your image here</p>
+                    <p>or</p>
+                    <button class="btn secondary" id="fileInputBtn">
+                        <i class="fas fa-folder-open"></i>
+                        Browse Files
+                    </button>
+                    <input type="file" id="fileInput" accept="image/*" hidden>
+                </div>
+                <div class="preview-container" id="previewContainer" style="display: none;">
+                    <img id="previewImage" alt="Preview">
+                    <button class="btn secondary" id="resetBtn">
+                        <i class="fas fa-redo"></i>
+                        Reset
+                    </button>
+                </div>
+                <section class="results-section" id="resultSection" style="display: none;">
+                    <h2>Classification Results</h2>
+                    <div class="results-container">
+                        <div class="result-card">
+                            <div class="result-header">
+                                <i class="fas fa-recycle"></i>
+                                <h3>Recyclable</h3>
+                            </div>
+                            <div class="confidence-bar">
+                                <div class="bar-fill recyclable"></div>
+                            </div>
+                            <div class="confidence-value">0%</div>
+                        </div>
+                        <div class="result-card">
+                            <div class="result-header">
+                                <i class="fas fa-leaf"></i>
+                                <h3>Organic</h3>
+                            </div>
+                            <div class="confidence-bar">
+                                <div class="bar-fill organic"></div>
+                            </div>
+                            <div class="confidence-value">0%</div>
+                        </div>
+                    </div>
+                    <div class="final-prediction">
+                        <h3>Final Prediction: <span id="finalPrediction">-</span></h3>
+                        <div class="confidence">Confidence: <span id="confidenceValue">-</span></div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Camera Section -->
+            <section class="camera-section" id="cameraSection" style="display: none;">
+                <div class="camera-feed">
+                    <video id="cameraFeed" autoplay playsinline></video>
+                    <div class="scan-effect"></div>
+                </div>
+                <div class="camera-controls">
+                    <button id="startCamera" class="btn primary">
+                        <i class="fas fa-camera"></i>
+                        Start Camera
+                    </button>
+                    <button id="captureBtn" class="btn secondary" disabled>
+                        <i class="fas fa-camera-retro"></i>
+                        Capture & Classify
+                    </button>
+                </div>
+                <section class="results-section" id="cameraResultSection" style="display: none;">
+                    <h2>Classification Results</h2>
+                    <div class="results-container">
+                        <div class="result-card">
+                            <div class="result-header">
+                                <i class="fas fa-recycle"></i>
+                                <h3>Recyclable</h3>
+                            </div>
+                            <div class="confidence-bar">
+                                <div class="bar-fill recyclable"></div>
+                            </div>
+                            <div class="confidence-value">0%</div>
+                        </div>
+                        <div class="result-card">
+                            <div class="result-header">
+                                <i class="fas fa-leaf"></i>
+                                <h3>Organic</h3>
+                            </div>
+                            <div class="confidence-bar">
+                                <div class="bar-fill organic"></div>
+                            </div>
+                            <div class="confidence-value">0%</div>
+                        </div>
+                    </div>
+                    <div class="final-prediction">
+                        <h3>Final Prediction: <span id="cameraFinalPrediction">-</span></h3>
+                        <div class="confidence">Confidence: <span id="cameraConfidenceValue">-</span></div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="stats-section" id="statsSection" style="display: none;">
+                <h2>Classification Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-recycle"></i>
+                        <h3>Recyclable Items</h3>
+                        <div class="stat-value" id="totalRecyclable">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Organic Items</h3>
+                        <div class="stat-value" id="totalOrganic">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Total Classifications</h3>
+                        <div class="stat-value" id="totalClassifications">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Average Processing Time</h3>
+                        <div class="stat-value" id="avgProcessingTime">0ms</div>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="classificationChart"></canvas>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="about-section" id="aboutSection" style="display: none;">
+                <div class="about-content">
+                    <h2>About WIC AI Developer</h2>
+                    <section class="about-me-section">
+                        
+                        <p>
+                            Hi, I'm <strong>Ephraim Maina Ikomoli</strong>. I'm working on this AI-powered waste classification system that helps sort waste into <strong>organic</strong> and <strong>recyclable</strong> categories.
+                            This project has the potential to be used in <strong>smart bins</strong> equipped with cameras to automatically sort waste, improving recycling efficiency and waste management. Together we can 
+                            make the world a better place using artificial Inteligence
+                        </p>
+                    
+                        <h3>Connect with Me</h3>
+                        <ul class="social-links">
+                            <li><a href="https://github.com/cybercypherdev" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                            <li><a href="https://www.instagram.com/cybercypherdev/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                            <li><a href="https://www.linkedin.com/in/ephraim-maina-70945b339/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                            <li><a href="mailto:ephraimmainadev@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+                        </ul>
+                    </section>
+                    
+                </div>
+            </section>
+        </div>
+
+        <!-- Info Panel -->
+        <div class="info-panel">
+            <div class="panel-section">
+                <h3>AI Insights</h3>
+                <div class="insights">
+                    <div class="insight-item">
+                        <i class="fas fa-brain"></i>
+                        <span>Model Confidence: <span id="modelConfidence">-</span></span>
+                    </div>
+                    <div class="insight-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Processing Time: <span id="processingTime">-</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-section">
+                <h3>Live Statistics</h3>
+                <div class="stats">
+                    <div class="stat-item">
+                        <i class="fas fa-recycle"></i>
+                        <span>Recyclable: <span id="recyclableCount">0</span></span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-leaf"></i>
+                        <span>Organic: <span id="organicCount">0</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-section">
+                <h3>Learning Progress</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="progress-text">Model Accuracy: <span id="modelAccuracy">-</span></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <p>Processing image...</p>
+    </div>
+
+    <!-- Error Message -->
+    <div class="error-message" id="errorMessage">
+        <i class="fas fa-exclamation-circle"></i>
+        <span>An error occurred while processing the image.</span>
+        <button class="btn secondary" onclick="hideError()">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="app.js" defer></script>
+
+</body>
+</html> 

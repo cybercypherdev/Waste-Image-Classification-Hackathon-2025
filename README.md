@@ -1,5 +1,5 @@
 ## ![favicon-16x16](https://github.com/user-attachments/assets/8237d9de-cac8-43dc-957e-947c799d3cba) Waste Image Classification System
-
+by Ephraim Maina
 A machine learning system that classifies waste images into different categories using SGD Classifier and Linear SVM models.
 ![Screenshot 2025-03-20 171640](https://github.com/user-attachments/assets/a1c0bce5-3d78-4259-9987-0ee63b0997c3)
 

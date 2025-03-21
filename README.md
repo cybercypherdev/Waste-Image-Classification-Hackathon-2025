@@ -160,12 +160,14 @@ The system implements several memory optimization techniques:
 
 Common issues and solutions:
 The main issue has been memory management and file location errors
+
 ![sdsd](https://github.com/user-attachments/assets/041dd219-bf95-44b8-a083-83542518fed3)
 
 1. Memory errors:
    - Reduce batch_size in data_loader.py
    - Decrease max_samples_per_class in train.py
-     ![Screenshot 2025-03-20 001352](https://github.com/user-attachments/assets/5c5d0668-688f-42f9-8e05-0d9d0c8b40fe)
+
+![Screenshot 2025-03-20 001352](https://github.com/user-attachments/assets/5c5d0668-688f-42f9-8e05-0d9d0c8b40fe)
 
 
 2. Model convergence:

@@ -1,4 +1,4 @@
-### ![favicon-16x16](https://github.com/user-attachments/assets/8237d9de-cac8-43dc-957e-947c799d3cba) Waste Image Classification System
+# ![favicon-16x16](https://github.com/user-attachments/assets/8237d9de-cac8-43dc-957e-947c799d3cba) Waste Image Classification System
 by Ephraim Maina
 
 A machine learning system that classifies waste images into different categories using SGD Classifier and Linear SVM models.
@@ -94,6 +94,7 @@ The server will run at `http://localhost:8000`
 2. Upload an image using the interface
 3. View the classification results and confidence scores
    ### How to use the web Interface
+   
 ![Screenshot 2025-03-20 171715](https://github.com/user-attachments/assets/360c1104-3f9a-4b32-ac46-a9426f117f2c)
 
    ### Video Guide for using the web interface
@@ -131,15 +132,18 @@ https://github.com/user-attachments/assets/67d69fc9-3c96-4caa-bde3-8ae7c2a9a28f
 
 The system generates:
 - Accuracy scores for both models
-  ![Screenshot 2025-03-20 001210](https://github.com/user-attachments/assets/40bffce5-e353-4b8e-8358-d4ab614051b4)
+
+![Screenshot 2025-03-20 001210](https://github.com/user-attachments/assets/40bffce5-e353-4b8e-8358-d4ab614051b4)
 
 - Classification reports
-  ![Screenshot 2025-03-20 001326](https://github.com/user-attachments/assets/67b178cd-8db1-468b-af22-aa60263e243a)
+  
+![Screenshot 2025-03-20 001326](https://github.com/user-attachments/assets/67b178cd-8db1-468b-af22-aa60263e243a)
 
 - Confusion matrices (saved as PNG files)
-  ![sgd_confusion_matrix](https://github.com/user-attachments/assets/615b9326-5503-43a1-af76-5dfbbb5aa0dc)
-![svm_confusion_matrix](https://github.com/user-attachments/assets/18a9dd6e-c3b3-4b61-8aef-324edc4e5a6b)
-]
+  
+![sgd_confusion_matrix](https://github.com/user-attachments/assets/615b9326-5503-43a1-af76-5dfbbb5aa0dc)
+![svm_confusion_matrix](https://github.com/user-attachments/assets/18a9dd6e-c3b3-4b61-8aef-324edc4e5a6b)]
+
 - Model performance comparisons
 
 ## Memory Optimization

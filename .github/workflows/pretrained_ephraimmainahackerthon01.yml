@@ -1,7 +1,3 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-# More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
-
 name: Build and deploy Python app to Azure Web App - EphraimMainahackerthon01
 
 on:
@@ -17,55 +13,75 @@ jobs:
       contents: read #This is required for actions/checkout
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkoutThe error in your job logs indicates that `setuptools.build@v4
 
       - name: Set up Python version
-        uses: actions/setup-python@v5
+       _meta` could not be imported, which caused the failure uses: actions/setup-python@v5
         with:
-          python-version: '3.13'
+. This typically happens due to missing or incompatible dependencies in the environment.
 
-      - name: Create and start virtual environment
+To resolve          python-version: '3.13'
+
+      - name: Create and this issue, you can explicitly install `setuptools start virtual environment
         run: |
-          python -m venv venv
-          source venv/bin/activate
+          python` and `wheel` before installing other dependencies. -m venv venv
+          source venv Here is an updated section of your workflow file:
+
+/bin/activate
       
+      - name: Upgrade pip and install build tools
+```yaml
+# .github/workflows/pretrained_ephraimmainah        run: |
+          source venv/bin/activate
+         ackerthon01.yml
+
+...
+
+steps:
+  - uses: actions/checkout pip install --upgrade pip setuptools wheel
+
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+         @v4
+
+  - name: Set up Python version
+    uses: actions source venv/bin/activate
+          pip install -/setup-python@v5
+    with:
+      python-version:r requirements.txt
         
-      # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
+      # Optional: Add step '3.13'
+
+  - name: Create and start virtual environment
+    to run tests here (PyTest, Django test suites, etc.)
 
       - name: Zip artifact for deployment
-        run: zip release.zip ./* -r
+ run: |
+      python -m venv venv
+      source v        run: zip release.zip ./* -r
 
-      - name: Upload artifact for deployment jobs
-        uses: actions/upload-artifact@v4
+      - name:env/bin/activate
+  
+  - name: Upgrade pip and install setuptools and Upload artifact for deployment jobs
+        uses: actions wheel
+    run: |
+      source venv/bin//upload-artifact@v4
         with:
-          name: python-app
+          name:activate
+      pip install --upgrade pip setuptools wheel python-app
           path: |
             release.zip
+  
+  - name: Install dependencies
+    run: |
+      source
             !venv/
 
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest venv/bin/activate
+      pip install -r requirements
     needs: build
     environment:
-      name: 'Production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-    
-    steps:
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v4
-        with:
-          name: python-app
+      name:.txt
 
-      - name: Unzip artifact for deployment
-        run: unzip release.zip
-
-      
-      - name: 'Deploy to Azure Web App'
-        uses: azure/webapps-deploy@v3
-        id: deploy-to-webapp
-        with:
-          app-name: 'EphraimMainahackerthon01'
-          slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4C464D3A6E6F4517A497CA57DBBEF11F }}
+...

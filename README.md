@@ -2,6 +2,7 @@
 by Ephraim Maina
 
 Access the site from this link https://kind-glacier-09583601e.6.azurestaticapps.net/
+
 A machine learning system that classifies waste images into different categories using SGD Classifier and Linear SVM models.
 ![Screenshot 2025-03-20 171640](https://github.com/user-attachments/assets/a1c0bce5-3d78-4259-9987-0ee63b0997c3)
 

@@ -1,6 +1,7 @@
 # ![favicon-16x16](https://github.com/user-attachments/assets/8237d9de-cac8-43dc-957e-947c799d3cba) Waste Image Classification System
 by Ephraim Maina
 
+Access the site from this link https://kind-glacier-09583601e.6.azurestaticapps.net/
 A machine learning system that classifies waste images into different categories using SGD Classifier and Linear SVM models.
 ![Screenshot 2025-03-20 171640](https://github.com/user-attachments/assets/a1c0bce5-3d78-4259-9987-0ee63b0997c3)
 
@@ -80,9 +81,11 @@ The pipeline uses memory-efficient techniques:
 
 ## Starting the API Server
 
-1. Start the FastAPI server:
+
+1.Clone the Pretained branch from this repositry
+2. Start the FastAPI server(/src/api/app.py) :
 ```bash
-python run_api.py
+python app.py
 ```
 
 The server will run at `http://localhost:8000`
@@ -90,7 +93,7 @@ The server will run at `http://localhost:8000`
 ## Using the System
 
 ### Web Interface
-1. Open `src/ui/index.html` in a web browser if you are running it localy
+1. The site is live at https://kind-glacier-09583601e.6.azurestaticapps.net/ but if you are running it localy Open `src/ui/index.html` in a web browser if you are running it localy
 2. Upload an image using the interface
 3. View the classification results and confidence scores
    ### How to use the web Interface
@@ -179,7 +182,44 @@ The main issue has been memory management and file location errors
    - Ensure correct directory structure
    - Check file permissions
    - Verify model files are saved correctly
+## Model Deployment
+I used microsoft Azure Web app services to deploy my model and the User interface  https://kind-glacier-09583601e.6.azurestaticapps.net/
+## Here are some of the screenshorts
 
-## License
+### Static Web For the FrontEnd Deployment 
+![Screenshot 2025-03-31 080431](https://github.com/user-attachments/assets/48fb138f-3b73-404c-9703-0d36c96124c9)
+![Screenshot 2025-03-31 081427](https://github.com/user-attachments/assets/06b628d4-ba7f-4c62-b46e-15114d39fefe)
 
-MIT license
+### Linking it to the back end
+![Screenshot 2025-03-31 080504](https://github.com/user-attachments/assets/6ef8b01a-3c5b-410e-8108-d3f281858c59)
+
+### The site running live
+![Screenshot 2025-03-31 080504](https://github.com/user-attachments/assets/cded6bbb-152f-467e-9934-3fe29d38ddf8)
+
+
+## Application of the Project in the Real World
+
+This AI-powered waste classification model has immense potential for revolutionizing waste management systems. Some of its real-world applications include:
+
+### 1. Smart Waste Bins
+Integrating the model into intelligent waste bins that automatically identify and sort recyclable and organic materials, streamlining the disposal process for individuals and businesses.
+
+### 2. Recycling Facilities
+Enhancing waste sorting automation in recycling centers to minimize human labor and error, accelerating the recycling process.
+
+### 3. Community Sustainability Initiatives
+Empowering communities to adopt better waste disposal practices through interactive tools and awareness campaigns that leverage the AI's classification capabilities.
+
+### 4. Smart Cities
+Incorporating the model into municipal waste management systems for data-driven optimization of collection routes and resource recovery processes.
+
+### 5. Agricultural Applications
+Identifying organic waste suitable for composting and repurposing it as fertilizer to support sustainable farming practices.
+
+### 6. Environmental Monitoring
+Collecting valuable waste data for researchers and policymakers to design effective strategies to combat pollution and promote sustainability.
+
+### 7. Commercial Use
+Assisting businesses, such as restaurants and supermarkets, to segregate waste efficiently for improved eco-friendly operations.
+
+By implementing these applications, we can take significant steps toward a cleaner, greener, and more sustainable world.

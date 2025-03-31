@@ -13,14 +13,15 @@ import io
 app = FastAPI()
 
 # Add CORS middleware
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allows all origins
+    allow_origins=["https://kind-glacier-09583601e.6.azurestaticapps.net"],  # Specific frontend domain
     allow_credentials=True,
-    allow_methods=["*"],  # Allows all methods
-    allow_headers=["*"],  # Allows all headers
+    allow_methods=["*"],  # Allow all HTTP methods
+    allow_headers=["*"],  # Allow all headers
+    expose_headers=["*"],  # Ensure CORS headers are included in responses
 )
-
 # Mount static files
 app.mount("/static", StaticFiles(directory=r"C:\Users\Set a Bar\Desktop\Hackerthon\src\ui"), name="static")
 

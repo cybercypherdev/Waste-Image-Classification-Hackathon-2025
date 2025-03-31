@@ -50,7 +50,7 @@ let slides = [];
 let autoPlayInterval;
 
 // API Configuration
-const API_URL = 'https://ephraimmainahackerthon01-cyc8adhmcqbqbdaq.canadacentral-01.azurewebsites.net/';
+const API_URL = 'https://ephraimmainahackerthon01-cyc8adhmcqbqbdaq.canadacentral-01.azurewebsites.net';
 
 // Fallback carousel images
 const fallbackImages = [
